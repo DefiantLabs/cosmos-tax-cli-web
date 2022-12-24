@@ -136,7 +136,6 @@ function Form(props) {
                 <br/>
                 <label className="input-label">Chain:</label>
                 <select name="chains" className="input select" id="chains-input" defaultValue={chain} onChange={evt => setChain(evt.target.value)}>
-                    <option value="all">All</option>
                     <option value="osmosis-1">osmosis-1</option>
                     <option value="cosmoshub-4">cosmoshub-4</option>
                 </select>
