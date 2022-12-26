@@ -4,7 +4,7 @@ A React website to generate Tax software CSV files for Cosmos taxable transactio
 
 # Quickstart
 To get up and running:
-- Go to the root dir of this project
+- Go to the root dir of this project.
 - Run `npm install` to install dependancies
 - Determine the api url that cosmos-tax-cli-web will be speaking to and export it when you start the app.
 - For linux and Mac this will look like: `REACT_APP_API_URL=http://localhost:8080 npm start`
