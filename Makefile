@@ -12,24 +12,8 @@ ifeq (,$(VERSION))
   endif
 endif
 
-# default value, overide with: make -e FQCN="foo"
-FQCN = ghcr.io/defiantlabs/cosmos-tax-cli-web
+FQCN = ghcr.io/defiantlabs/cosmos-tax-cli-web/cosmos-tax-cli-web# default value, overide with: make -e FQCN="foo"
 
-all: install
-
-install: go.sum
-	go install .
-
-build:
-	go build -o bin/cosmos-tax-cli-web .
-
-clean:
-	rm -rf build
-
-build-docker-amd:
-	docker build -t $(FQCN):$(VERSION) -f ./Dockerfile \
-	--build-arg TARGETPLATFORM=linux/amd64 .
-
-build-docker-arm:
-	docker build -t $(FQCN):$(VERSION) -f ./Dockerfile \
-	--build-arg TARGETPLATFORM=linux/arm64 .
+build-docker:
+	docker build -t $(FQCN):$(VERSION) -f ./Dockerfile .
+	docker push $(FQCN):$(VERSION)

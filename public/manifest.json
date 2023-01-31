@@ -1,6 +1,6 @@
 {
   "short_name": "cosmos-tax-cli-web",
-  "name": "cosmos-tax-cli-web - Opensource front end for the cosmos-tax-cli",
+  "name": "Sycamor - Tax Software CSV Application",
   "icons": [
   ],
   "start_url": ".",
